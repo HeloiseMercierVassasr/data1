@@ -320,7 +320,7 @@ public class BST implements FiniteSet{
                                   //its a member of one of those two sets.
                                   
                                   public static void union/member-checker(FiniteSet u, FiniteSet t){
-                    int element = new Random().nextInt(10) + 1;
+                    int elt = new Random().nextInt(10) + 1;
                     FiniteSet u_elt = u.add(elt);
                     FiniteSet t_elt = t.add(elt);
                     if ((t_elt.union(u_elt)).member(elt)) {
