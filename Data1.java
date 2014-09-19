@@ -242,7 +242,8 @@ public class BST implements FiniteSet{
                                   
                                   //TESTING
                                   //In order to test the properties implemented in the following methods
-                                  //we need to be able to generate random binary search trees.
+                                  //we need to be able to generate random binary search trees.Please find 
+                                  //a "persuasive" explanation of the propreties these testers check.
                                   
                                   
                                   
@@ -265,8 +266,7 @@ public class BST implements FiniteSet{
                 }
                                   }
                                   
-                                  //Checks that when an element is removed from a binary search tree
-                                  //its cardinality will be equal or one less then it was previously.
+                                  //Checks a proprety of finite sets using remove and cardinality
                                   
                                   public static void remove/cardinality-checker(FiniteSet u){
                     int rand = new Random().nextInt(10) + 1;
@@ -279,8 +279,7 @@ public class BST implements FiniteSet{
                 }
                                   
                                   
-                                  //Checks that for two equal sets t and u, u is a subset of t and
-                                  //t is a subset of u.
+                                  //Checks a proprety of finite sets using subset
                                   
                                   public static void subset-checker(FiniteSet t){
                     FiniteSet u = new FiniteSet(t.left, t.root, t.right);
@@ -291,7 +290,8 @@ public class BST implements FiniteSet{
                     }
                 }
                                   
-                                  //Checking that member (add t x) y = true <-> x = y \/ member t y = true
+                                  //Checks the first proprety in assignment description
+                                  
                                   public static void proprety1-checker(FiniteSet t ){
                     int x = new Random().nextInt(10) + 1;
                     int y = new Random().nextInt(10) + 1;
@@ -304,8 +304,7 @@ public class BST implements FiniteSet{
                 }
                                   
                                   
-                                  //Checks that when you add an element, member returns true when called 
-                                  //over that element 
+                                  //Checks a proprety of finite sets using  add and member
                                   
                                   public static void add/member-checker(int elt){
                     this.add(elt);
@@ -316,8 +315,7 @@ public class BST implements FiniteSet{
                     }
                 }
                                   
-                                  //Checks that if an element is a member of the union of two sets then 
-                                  //its a member of one of those two sets.
+                                  //Checks a proprety of finite sets using union and member
                                   
                                   public static void union/member-checker(FiniteSet u, FiniteSet t){
                     int elt = new Random().nextInt(10) + 1;
@@ -330,8 +328,7 @@ public class BST implements FiniteSet{
                     }
                 }
                                   
-                                  //Checks that the cardinality of the intersection of two non-equal sets is always
-                                  //smaller then the cardinality of the union of those two sets.
+                                  //Checks a proprety of finite sets using inter, union and cardinality
                                   
                                   public static void inter/union/cardinality-checker(FiniteSet u, FiniteSet t){
                     int cardinality_inter =  (u.inter(t)).cardinality();
@@ -345,7 +342,7 @@ public class BST implements FiniteSet{
                 }
                                   
                                   
-                                  //Checks that the union of (diff t u) and (inter u t) is equal set u .
+                                  //Checks a proprety of finite sets using diff, union, inter and equal
                                   
                                   public static void diff/union/inter/equal-checker(FiniteSet u, FiniteSet t){
                     FiniteSet diff = t.diff(u);
