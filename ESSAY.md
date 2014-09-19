@@ -55,4 +55,5 @@ and (inter u t) and set u.
 
 
 The main method then generates three random FiniteSet and calls the tester methods.
-I also added a test calls on empty finite sets just to be sure they where tested on all "sorts" of finite sets.
+I also added a few test calls over the empty finite set to be sure the methods were tested 
+on all "sorts" of finite sets.
