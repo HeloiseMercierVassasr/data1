@@ -347,7 +347,7 @@ public class BST implements FiniteSet{
                                   
                                   //Checks that the union of (diff t u) and (inter u t) is equal set u .
                                   
-                                  public static void diff/union/inter/equal-checked(FiniteSet u, FiniteSet t){
+                                  public static void diff/union/inter/equal-checker(FiniteSet u, FiniteSet t){
                     FiniteSet diff = t.diff(u);
                     FiniteSet inter = t.inter(u);
                     FiniteSet unionSet = diff.union(inter);
@@ -372,27 +372,36 @@ public class BST implements FiniteSet{
                         FiniteSet Set1 = RanSet(emptySet, cardinality1);
                         FiniteSet Set2 = RanSet(emptySet, cardinality2);
                         FiniteSet Set3 = RanSet(emptySet, cardinality3);
+                        FiniteSet EmptyOne = new Empty();
                         remove/cardinality-checker(Set1);
                         remove/cardinality-checker(Set2);
                         remove/cardinality-checker(Set3);
+                        remove/cardinality-checker(EmptyOne);
                         subset-checker(Set1);
                         subset-checker(Set2);
                         subset-checker(Set3);
+                        subset-checker(EmptyOne);
                         proprety1-checker(Set1);
                         proprety1-checker(Set2);
                         proprety1-checker(Set3);
+                        proprety1-checker(EmptyOne);
                         Set1.add/member-checker(random);
                         Set2.add/member-checker(random);
                         Set3.add/member-checker(random);
+                        EmptyOne.add/member-checker(random);
                         union/member-checker(Set1, Set2);
                         union/member-checker(Set1, Set3);
                         union/member-checker(Set3, Set3);
+                        union/member-checker(EmptyOne, Set1);
+                        union/member-checker(Set3, EmptyOne);
                         inter/union/cardinality-checker(Set2, Set3);
-                        inter/union/cardinality-checker(Set3, Set3);
+                        inter/union/cardinality-checker(EmptyOne, Set3);
                         inter/union/cardinality-checker(Set1, Set1);
+                        inter/union/cardinality-checker(Set2, EmptyOne);
                         diff/union/inter/equal-checked(Set1, Set2);
                         diff/union/inter/equal-checked(Set3, Set1);
-                        diff/union/inter/equal-checked(Set2, Set2);
+                        diff/union/inter/equal-checked(Set2, EmptyOne);
+                        diff/union/inter/equal-checked(EmptyOne, Set2);
                     }
                 }
                                   
