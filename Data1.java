@@ -218,7 +218,7 @@ public class BST implements FiniteSet{
                                   }
                                   }
                                   
-                                  //Two sets are equal if and only if they contain the exact same
+                                  //EQUAL : Two sets are equal if and only if they contain the exact same
                                   //elements. And the intersection of two sets that contain the exact
                                   //same elements is equal to the both sets.
                                   
@@ -227,7 +227,7 @@ public class BST implements FiniteSet{
                 }
                                   
                                   
-                                  //BOOLEAN : A set t can only be a subset of set u if it contains only
+                                  //SUBSET : A set t can only be a subset of set u if it contains only
                                   //elements from set u. If the first element of the set t (the root)
                                   //isn't a member of set u, then return false, otherwise you want to check
                                   //that the right and left subtree of set t are subsets of set u.
@@ -375,9 +375,9 @@ public class BST implements FiniteSet{
                         remove/cardinality-checker(Set1);
                         remove/cardinality-checker(Set2);
                         remove/cardinality-checker(Set3);
-                        Set2.subset/equal-checker(Set1);
-                        Set3.subset/equal-checker(Set2);
-                        Set3.subset/equal-checker(Set3);
+                        subset/equal-checker(Set1);
+                        subset/equal-checker(Set2);
+                        subset/equal-checker(Set3);
                         proprety1-checker(Set1);
                         proprety1-checker(Set2);
                         proprety1-checker(Set3);
