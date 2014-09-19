@@ -282,12 +282,12 @@ public class BST implements FiniteSet{
                                   //Checks that for two equal sets t and u, u is a subset of t and
                                   //t is a subset of u.
                                   
-                                  public static void subset/equal-checker(FiniteSet t){
-                    FiniteSet u = t;
+                                  public static void subset-checker(FiniteSet t){
+                    FiniteSet u = new FiniteSet(t.left, t.root, t.right);
                     if (second.subset(this) && this.subset(second)){
-                        System.out.println("The property checker for subset/equal was successful")
+                        System.out.println("The property checker for subset was successful")
                     } else {
-                        System.out.println("The proprety checker for subset/equal was unsucessful")
+                        System.out.println("The proprety checker for subset was unsucessful")
                     }
                 }
                                   
@@ -375,9 +375,9 @@ public class BST implements FiniteSet{
                         remove/cardinality-checker(Set1);
                         remove/cardinality-checker(Set2);
                         remove/cardinality-checker(Set3);
-                        subset/equal-checker(Set1);
-                        subset/equal-checker(Set2);
-                        subset/equal-checker(Set3);
+                        subset-checker(Set1);
+                        subset-checker(Set2);
+                        subset-checker(Set3);
                         proprety1-checker(Set1);
                         proprety1-checker(Set2);
                         proprety1-checker(Set3);
