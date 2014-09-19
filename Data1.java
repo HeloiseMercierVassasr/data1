@@ -366,9 +366,9 @@ public class BST implements FiniteSet{
                     FiniteSet emptySet = new Empty();
                     for (int i = 0; i< 5; i++) {
                         int random = new Random().nextInt(100) + 1;
-                        int cardinality = new Random().nextInt(10) + 1;
-                        int cardinality' = new Random().nextInt(10) + 1;
-                        int cardinality'' = new Random().nextInt(10) + 1;
+                        int cardinality1 = new Random().nextInt(10) + 1;
+                        int cardinality2 = new Random().nextInt(10) + 1;
+                        int cardinality3 = new Random().nextInt(10) + 1;
                         FiniteSet Set1 = RanSet(emptySet, cardinality1);
                         FiniteSet Set2 = RanSet(emptySet, cardinality2);
                         FiniteSet Set3 = RanSet(emptySet, cardinality3);
